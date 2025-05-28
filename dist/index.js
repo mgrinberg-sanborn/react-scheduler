@@ -1460,7 +1460,7 @@ H.div`
   width: 40vw;
   height: 40vh;
 `;
-const ve = 50, _e = 24, Ke = 16, Ye = 40, Ue = Ye + Ke + _e, Ae = 84, we = 56, xe = 196, Me = 12, pe = 50, Xe = 24, st = 16, Tt = 40, ho = Xe + st + Tt, mr = 1, vr = 52, ke = {
+const ve = 50, _e = 24, Ke = 16, Ye = 40, Ue = Ye + Ke + _e, Ae = 84, we = 56, xe = 425, Me = 12, pe = 50, Xe = 24, st = 16, Tt = 40, ho = Xe + st + Tt, mr = 1, vr = 52, ke = {
   topRow: "600 14px Inter",
   middleRow: "400 10px Inter",
   bottomRow: {
