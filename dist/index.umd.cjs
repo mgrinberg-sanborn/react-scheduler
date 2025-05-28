@@ -354,17 +354,14 @@ white-space: nowrap;
 `,zr=W.p`
   margin: 0;
   padding: 0;
-  font-size: ${({isMain:e})=>e?.75+"rem":.625+"rem"};
-  letter-spacing: ${({isMain:e})=>e?1+"px":.5+"px"};
-  line-height: ${({isMain:e})=>e?1.125+"rem":.75+"rem"};
-  color: ${({isMain:e,theme:n})=>e?n.colors.textPrimary:n.colors.placeholder};
-  text-overflow: ellipsis;
-  display: inline-block;
-  max-width: 144px;
+  font-size: ${({isMain:e})=>e?"0.75rem":"0.625rem"};
+  letter-spacing: ${({isMain:e})=>e?"1px":"0.5px"};
+  line-height: ${({isMain:e})=>e?"1.125rem":"0.75rem"};
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-`,Gs=({id:e,item:n,rows:t,onItemClick:r})=>v.jsx(js,{title:n.title+" | "+n.subtitle,clickable:typeof r=="function",rows:t,onClick:()=>r==null?void 0:r({id:e,label:n}),children:v.jsxs(zs,{children:[v.jsx(Bs,{children:n.icon?v.jsx(Vs,{src:n.icon,alt:"Icon"}):v.jsx(ge,{iconName:"defaultAvatar"})}),v.jsxs(Rs,{children:[v.jsx(zr,{isMain:!0,children:n.title}),v.jsx(zr,{children:n.subtitle})]})]})}),Us=({data:e,rows:n,onLoadNext:t,onLoadPrevious:r,pageNum:o,pagesAmount:s,searchInputValue:i,onSearchInputChange:a,onItemClick:l})=>{const[c,d]=b.useState(!1),{search:u}=Ue(),f=()=>d(m=>!m);return v.jsxs(Hs,{children:[v.jsxs(Zs,{children:[v.jsxs(Fs,{isFocused:c,children:[v.jsx(Ws,{placeholder:u,value:i,onChange:a,onFocus:f,onBlur:f}),v.jsx(ge,{iconName:"search"})]}),v.jsx(jr,{intent:"previous",isVisible:o!==0,onClick:r,icon:v.jsx(ge,{iconName:"arrowUp",width:"16",height:"16"}),pageNum:o,pagesAmount:s})]}),e.map((m,y)=>v.jsx(Gs,{id:m.id,item:m.label,rows:n[y],onItemClick:l},m.id)),v.jsx(jr,{intent:"next",isVisible:o!==s-1,onClick:t,icon:v.jsx(ge,{iconName:"arrowDown",width:"16",height:"16"}),pageNum:o,pagesAmount:s})]})},Xs=W.div`
+  display: block;
+  white-space: normal;
+  overflow: visible;
+`,Gs=({id:e,item:n,rows:t,onItemClick:r})=>v.jsx(js,{title:n.title+" | "+n.subtitle,clickable:typeof r=="function",rows:t,onClick:()=>r==null?void 0:r({id:e,label:n}),children:v.jsxs(zs,{children:[v.jsx(Bs,{children:n.icon?v.jsx(Vs,{src:n.icon,alt:"Icon"}):v.jsx(ge,{iconName:"defaultAvatar"})}),v.jsxs(Rs,{children:[v.jsx(zr,{isMain:!0,children:n.title}),v.jsx(zr,{dangerouslySetInnerHTML:{__html:n.subtitle}})," "]})]})}),Us=({data:e,rows:n,onLoadNext:t,onLoadPrevious:r,pageNum:o,pagesAmount:s,searchInputValue:i,onSearchInputChange:a,onItemClick:l})=>{const[c,d]=b.useState(!1),{search:u}=Ue(),f=()=>d(m=>!m);return v.jsxs(Hs,{children:[v.jsxs(Zs,{children:[v.jsxs(Fs,{isFocused:c,children:[v.jsx(Ws,{placeholder:u,value:i,onChange:a,onFocus:f,onBlur:f}),v.jsx(ge,{iconName:"search"})]}),v.jsx(jr,{intent:"previous",isVisible:o!==0,onClick:r,icon:v.jsx(ge,{iconName:"arrowUp",width:"16",height:"16"}),pageNum:o,pagesAmount:s})]}),e.map((m,y)=>v.jsx(Gs,{id:m.id,item:m.label,rows:n[y],onItemClick:l},m.id)),v.jsx(jr,{intent:"next",isVisible:o!==s-1,onClick:t,icon:v.jsx(ge,{iconName:"arrowDown",width:"16",height:"16"}),pageNum:o,pagesAmount:s})]})},Xs=W.div`
   width: 388px;
   height: 100%;
   position: absolute;
