@@ -27,7 +27,7 @@ const LeftColumnItem: FC<LeftColumnItemProps> = ({ id, item, rows, onItemClick }
         </StyledImageWrapper>
         <StyledTextWrapper>
           <StyledText isMain>{item.title}</StyledText>
-          <StyledText>{item.subtitle}</StyledText>
+          <StyledText dangerouslySetInnerHTML={{ __html: item.subtitle }} />{" "}
         </StyledTextWrapper>
       </StyledInnerWrapper>
     </StyledWrapper>

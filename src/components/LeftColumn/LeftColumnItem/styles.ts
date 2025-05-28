@@ -43,14 +43,11 @@ export const StyledTextWrapper = styled.div`
 export const StyledText = styled.p<StyledTextProps>`
   margin: 0;
   padding: 0;
-  font-size: ${({ isMain }) => (isMain ? 0.75 + "rem" : 0.625 + "rem")};
-  letter-spacing: ${({ isMain }) => (isMain ? 1 + "px" : 0.5 + "px")};
-  line-height: ${({ isMain }) => (isMain ? 1.125 + "rem" : 0.75 + "rem")};
-  color: ${({ isMain, theme }) => (isMain ? theme.colors.textPrimary : theme.colors.placeholder)};
-  text-overflow: ellipsis;
-  display: inline-block;
-  max-width: 144px;
+  font-size: ${({ isMain }) => (isMain ? "0.75rem" : "0.625rem")};
+  letter-spacing: ${({ isMain }) => (isMain ? "1px" : "0.5px")};
+  line-height: ${({ isMain }) => (isMain ? "1.125rem" : "0.75rem")};
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  display: block;
+  white-space: normal;
+  overflow: visible;
 `;
